@@ -23,8 +23,8 @@ Using the `sklearn` and `pandas` packages in Python, I created a content-based r
 
 ![pic](pic3.png)
 
-`for idx, row in ds.iterrows():
+```for idx, row in ds.iterrows():
     similar_indices = cosine_similarities[idx].argsort()[:-100:-1]
     similar_items = [(cosine_similarities[idx][i], ds['id'][i]) for i in similar_indices]
 
-    results[row['id']] = similar_items[1:]`
+    results[row['id']] = similar_items[1:]```
